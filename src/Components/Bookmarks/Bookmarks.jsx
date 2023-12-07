@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Bookmarks = ({totalTime}) => {
+const Bookmarks = ({ totalTime, bookmarks }) => {
   return (
     <div>
       <div className='border rounded-md p-5 bg-neutral-700'>
@@ -8,7 +8,13 @@ const Bookmarks = ({totalTime}) => {
       </div>
       <div className='border rounded-md mt-5 p-4 text-center bg-neutral-700'>
         <h3>Bookmarked Blogs : B</h3>
-
+        {
+          bookmarks.map((mark,index) =>
+            <div key={index} className="bg-slate-900 border m-3">
+              <p className='p-3'>{mark}</p>
+            </div>
+          )
+        }
       </div>
     </div>
   )

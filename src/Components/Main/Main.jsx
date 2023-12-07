@@ -18,10 +18,16 @@ const Main = () => {
       setTotalTime(totalTime+readingTime);
     }
 
+    const [bookmarks,setBookmarks]=useState([])
+    const handleBookMark = title =>{
+      const newArr = [...bookmarks,title]
+      setBookmarks(newArr)
+    }
+
   return (
     <div className='flex flex-col md:flex-row justify-between mt-3'>
-      <Blogs blogs={blogs} handleClick={handleClick}></Blogs>
-      <Bookmarks totalTime = {totalTime}></Bookmarks>
+      <Blogs blogs={blogs} handleClick={handleClick} handleBookMark={handleBookMark}></Blogs>
+      <Bookmarks totalTime = {totalTime} bookmarks={bookmarks}></Bookmarks>
     </div>
   )
 }
