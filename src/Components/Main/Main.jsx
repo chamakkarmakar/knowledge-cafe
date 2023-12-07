@@ -13,14 +13,15 @@ const Main = () => {
             })
     }, []);
 
-    const handleClick = blog =>{
-      console.log(blog.reading_time);
+    const [totalTime, setTotalTime] = useState(0);
+    const handleClick = readingTime =>{
+      setTotalTime(totalTime+readingTime);
     }
 
   return (
     <div className='flex flex-col md:flex-row justify-between mt-3'>
       <Blogs blogs={blogs} handleClick={handleClick}></Blogs>
-      <Bookmarks></Bookmarks>
+      <Bookmarks totalTime = {totalTime}></Bookmarks>
     </div>
   )
 }
