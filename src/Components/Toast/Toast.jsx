@@ -1,11 +1,13 @@
 import React from 'react'
 
 const Toast = ({ message }) => {
-  return (
-    <div className="fixed top-0 right-auto bg-slate-200 text-amber-500 px-5 py-8 rounded-md">
-      {message}
-    </div>
-  )
+    return (
+        <div className="flex items-center justify-center">
+            <div className="fixed top-2 right-56 bg-red-300 text-yellow-50 px-5 py-6 rounded-md">
+                {message}
+            </div>
+        </div>
+    )
 }
 
 export default Toast
