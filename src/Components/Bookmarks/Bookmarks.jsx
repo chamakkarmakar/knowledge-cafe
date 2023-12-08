@@ -2,7 +2,7 @@ import React from 'react'
 
 const Bookmarks = ({ totalTime, bookmarks }) => {
   return (
-    <div>
+    <div  className='fixed top-24 right-32 w-96 mb-20'>
       <div className='border rounded-md p-5 bg-neutral-700'>
         <p>Spent time on read : {totalTime} minutes</p>
       </div>
